@@ -1,12 +1,13 @@
 pipeline {
 agent any
-stages
+stages{
 // FRONTEND BUILD
 stage( 'Build Frontend') {
 steps {
 dir( 'STUDENTAPI-REACT') {
 bat 'npm install'
 bat 'npm run build'
+}
 }
 }
 }
